@@ -2,6 +2,7 @@ package org.vaadin.jeanchristophe;
 
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.dependency.JavaScript;
+import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.function.SerializableConsumer;
@@ -10,10 +11,7 @@ import elemental.json.JsonArray;
 
 import java.util.List;
 
-@JavaScript("https://www.amcharts.com/lib/4/core.js")
-@JavaScript("https://www.amcharts.com/lib/4/charts.js")
-@JavaScript("https://www.amcharts.com/lib/4/plugins/forceDirected.js")
-@JavaScript("https://www.amcharts.com/lib/4/themes/animated.js")
+@NpmPackage(value = "@amcharts/amcharts4", version = "4.9.23")
 @JavaScript("./src/xychart-connector.js")
 public class XYChart extends Div {
 
